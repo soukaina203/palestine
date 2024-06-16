@@ -1,0 +1,29 @@
+<div class="relative bg-white p-[3rem] pb-[6rem]">
+
+  <div class="relative px-4 py-16 mx-auto bg-white sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+
+      <h2 class="max-w-lg mb-6 font-sans text-center text-3xl font-bold leading-none tracking-tight text-[#3B5962] sm:text-4xl md:mx-auto">
+        {{"skills" | translate}}
+      </h2>
+
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+      <div class="h-full w-full p-[3rem] pb-6 mx-auto my-auto duration-300 transform shadow-xl cursor-pointer hover:-translate-y-1"
+        *ngFor="let item of skills">
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mb-4 ml-auto mr-auto text-center rounded-full">
+            <img [src]="'assets/about/' + item.img + '.png'" alt="" />
+          </div>
+          <h6 class="mb-3 text-xl font-bold leading-5 text-center">{{item.title}}</h6>
+          <p class="mb-3 text-lg text-center text-gray-900">
+            {{item.techs}}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
